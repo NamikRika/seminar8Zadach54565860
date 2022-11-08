@@ -98,3 +98,114 @@
 
 //  // Решение задачи 54 - завершено
 
+
+
+// // Задача 56: Задайте прямоугольный двумерный массив. 
+// // Напишите программу, которая будет находить 
+// // строку с наименьшей суммой элементов.
+
+// // Например, задан массив:
+// // 1 4 7 2
+// // 5 9 2 3
+// // 8 4 2 4
+// // 5 2 6 7
+// // 1 строка
+
+// // Решения задачи 56
+
+// Console.WriteLine("Задача 56: \n Задайте прямоугольный двумерный массив.\n" + 
+//                   "Напишите программу, которая будет находить \n" + 
+//                   "строку с наименьшей суммой элементов.");
+
+// Console.Write("Введите количество строк в массиве: ");
+// int rowsCount = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов в массиве: ");
+// int columnCount = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// int [,] FillArray()
+
+// {
+
+// int [,] notСalculatedLine = new int[rowsCount, columnCount];
+//     Random random = new Random();
+//     for (int i = 0; i < notСalculatedLine.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < notСalculatedLine.GetLength(1); j++)
+//         {
+//             notСalculatedLine[i, j] = random.Next(1,100);            
+            
+//         }
+
+//     }
+//     return notСalculatedLine;      
+    
+// }    
+
+// void ShowArray(int[,] notСalculatedLine)
+// {  
+
+//     for (int i=0; i < notСalculatedLine.GetLength(0); i++)    
+//      {           
+//         for (int j=0; j < notСalculatedLine.GetLength(1); j++)
+//         {           
+//          Console.Write(notСalculatedLine[i, j]);          
+//          Console.Write(" ");             
+//         }
+//            Console.WriteLine("");                                                   
+                                        
+//      }      
+      
+// }
+
+// void СalculatedRate(int[,] notСalculatedLine)
+// {
+
+// int test2 =1;
+// int test =0;
+// int sumLine = 0;
+// for (int i=0; i < notСalculatedLine.GetLength(0); i++)    
+//      {          
+
+//         for (int j=0; j < notСalculatedLine.GetLength(1); j++)
+//         {           
+//          sumLine += notСalculatedLine[i,j];        
+
+//          }
+          
+//           if (i<1) {
+//             test = sumLine;
+//          }        
+//          else
+//          {
+//             if (test > sumLine)
+//             {
+//                 test = sumLine;                
+//                 test2 = i+1;
+//             }
+         
+         
+//         }
+                
+//          //test += sumLine;                                                 
+//          sumLine=0;
+         
+//      }      
+   
+//    Console.WriteLine("Строкой с наименьшей суммой элементов является " + test2 + " строка");
+//    Console.WriteLine("Сумма элементов строки = " + test);
+   
+
+// }
+
+// Console.WriteLine();
+// Console.WriteLine("Заданный массив");
+// int [,] myArray = FillArray ();
+// ShowArray(myArray);
+// Console.WriteLine();
+// СalculatedRate(myArray);
+// Console.WriteLine();
+
+// // Решения задачи 56 --- Завершено
+
+
