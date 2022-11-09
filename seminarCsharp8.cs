@@ -344,3 +344,85 @@
 // ShowResultMatrix(resultMatrix);
 
 // // // Решения задачи 58 --- Завершено ----------------------------------------------
+
+// Задача 60: 
+// Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// Напишите программу, которая будет построчно выводить массив, 
+//добавляя индексы каждого элемента.
+
+Console.Write("Введите размер массива X: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите размер массива Y: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите размер массива Z: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int [,,] Fill3dArray()
+{
+      
+  int[,,] array3D = new int[size, min, max];
+  
+    Random random = new Random();
+
+    for (int i = 0; i < array3D.GetLength(0); i++)
+    {
+        for (int j = 0; j < array3D.GetLength(1); j++)
+        {
+            for (int k = 0; k < array3D.GetLength(2); k++)
+               {
+                   array3D[i,j,k] = random.Next(10,30);
+               }
+               
+     } 
+        
+    }    
+
+    int temp = array3D[0,0,0];
+
+for (int ii = 0; ii < array3D.GetLength(0); ii++) // -----2
+    {
+        for (int jj = 0; jj < array3D.GetLength(1); jj++)
+        {
+            for (int kk = 0; kk < array3D.GetLength(2); kk++)
+               {
+                   if (array3D[ii,jj,kk] == temp)
+                   array3D[ii,jj,kk] = temp;
+                //    ii=0;
+                //    jj=0;
+                //    kk=0;                   
+               }
+               
+     } 
+    
+    }  //--------  
+
+   return array3D;
+}    
+
+
+void Show3dArray(int[,,] array3D)
+{  
+
+    for (int i=0; i < array3D.GetLength(0); i++)    
+     {           
+        for (int j=0; j < array3D.GetLength(1); j++)
+        {           
+                 for (int k=0; k < array3D.GetLength(2); k++)
+                  {           
+                      Console.Write(array3D[i, j, k]);          
+                      Console.Write(" " + "(" + i + "," + j + "," + k  + ")" + "; ");             
+                  }
+                      Console.WriteLine("");                                                                                           
+        }      
+   
+    }  
+                                        
+ }      
+      
+
+Console.WriteLine("Неотсортированный массив");
+int [,,] myArray = Fill3dArray();
+Show3dArray(myArray);
+Console.WriteLine();
+
+// Задача 60: завершена -----------------------
