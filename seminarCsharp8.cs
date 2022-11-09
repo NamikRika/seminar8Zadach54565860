@@ -345,84 +345,102 @@
 
 // // // Решения задачи 58 --- Завершено ----------------------------------------------
 
-// Задача 60: 
-// Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
-// Напишите программу, которая будет построчно выводить массив, 
-//добавляя индексы каждого элемента.
+// // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// // Напишите программу, которая будет построчно выводить массив, добавляя индексы 
+// // каждого элемента.
+// //Массив размером 2 x 2 x 2
+// //66(0,0,0) 25(0,1,0)
+// //34(1,0,0) 41(1,1,0)
+// //27(0,0,1) 90(0,1,1)
+// //26(1,0,1) 55(1,1,1)
 
-Console.Write("Введите размер массива X: ");
-int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите размер массива Y: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите размер массива Z: ");
-int max = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Задача 60. \n Сформируйте трёхмерный массив из неповторяющихся \n" +
+//                   "двузначных чисел. Напишите программу, которая будет построчно выводить \n" +
+//                   "массив, добавляя индексы каждого элемента.");
+// Console.WriteLine();                 
 
-int [,,] Fill3dArray()
-{
+// Console.Write("Введите размер массива X: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите размер массива Y: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите размер массива Z: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+// int [,,] Fill3dArray()
+// {
       
-  int[,,] array3D = new int[size, min, max];
+//   int[,,] array3D = new int[size, min, max];
   
-    Random random = new Random();
+//     Random random = new Random();
 
-    for (int i = 0; i < array3D.GetLength(0); i++)
-    {
-        for (int j = 0; j < array3D.GetLength(1); j++)
-        {
-            for (int k = 0; k < array3D.GetLength(2); k++)
-               {
-                   array3D[i,j,k] = random.Next(10,30);
-               }
+//     for (int i = 0; i < array3D.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array3D.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < array3D.GetLength(2); k++)
+//                {
+//                    array3D[i,j,k] = random.Next(10,30);
+
                
-     } 
+//      } 
         
-    }    
-
-    int temp = array3D[0,0,0];
-
-for (int ii = 0; ii < array3D.GetLength(0); ii++) // -----2
-    {
-        for (int jj = 0; jj < array3D.GetLength(1); jj++)
-        {
-            for (int kk = 0; kk < array3D.GetLength(2); kk++)
-               {
-                   if (array3D[ii,jj,kk] == temp)
-                   array3D[ii,jj,kk] = temp;
-                //    ii=0;
-                //    jj=0;
-                //    kk=0;                   
-               }
-               
-     } 
-    
-    }  //--------  
-
-   return array3D;
-}    
+//    }       
+// }    
+//     return array3D;
+// }
 
 
-void Show3dArray(int[,,] array3D)
-{  
+// void Show3dArray(int[,,] array3D)
+// {  
 
-    for (int i=0; i < array3D.GetLength(0); i++)    
-     {           
-        for (int j=0; j < array3D.GetLength(1); j++)
-        {           
-                 for (int k=0; k < array3D.GetLength(2); k++)
-                  {           
-                      Console.Write(array3D[i, j, k]);          
-                      Console.Write(" " + "(" + i + "," + j + "," + k  + ")" + "; ");             
-                  }
-                      Console.WriteLine("");                                                                                           
-        }      
-   
-    }  
+//     {
+//   int[] temp = new int[array3D.GetLength(0) * array3D.GetLength(1) * array3D.GetLength(2)];
+//   int  number;
+//   for (int i = 0; i < temp.GetLength(0); i++)
+//   {
+//     temp[i] = new Random().Next(10, 20);
+//     number = temp[i];
+//     if (i >= 1)
+//     {
+//       for (int j = 0; j < i; j++)
+//       {
+//         while (temp[i] == temp[j])
+//         {
+//           temp[i] = new Random().Next(10, 20);
+//           j = 0;
+//           number = temp[i];
+//         }
+//           number = temp[i];
+//       }
+//     }
+//   }
+//   int count = 0; 
+//   for (int x = 0; x < array3D.GetLength(0); x++)
+//   {
+//     for (int y = 0; y < array3D.GetLength(1); y++)
+//     {
+//       for (int z = 0; z < array3D.GetLength(2); z++)
+//       {
+//         array3D[x, y, z] = temp[count];
+//         count++;
+//         Console.Write(array3D[x, y, z]);          
+//         Console.Write(" " + "(" + x + "," + y + "," + z  + ")" + "; ");
+//       }
+
+//       Console.WriteLine();
+//     }
+//   }
+// }
+
+
                                         
- }      
+//  }      
       
+     
 
-Console.WriteLine("Неотсортированный массив");
-int [,,] myArray = Fill3dArray();
-Show3dArray(myArray);
-Console.WriteLine();
+// Console.WriteLine("Отсортированный массив");
+// int [,,] myArray = Fill3dArray();
+// Show3dArray(myArray);
+// Console.WriteLine();
 
-// Задача 60: завершена -----------------------
+// // Задача 60: завершена -----------------------
