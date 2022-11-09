@@ -1,4 +1,5 @@
 ﻿// // Урок 8. Как не нужно писать код. Часть 2
+
 // // Задача 54: Задайте двумерный массив. 
 // // Напишите программу, которая упорядочит 
 // // по убыванию элементы каждой строки двумерного массива.
@@ -96,7 +97,7 @@
 // Console.WriteLine("Cортированный массив");
 //  OrderArrayLines(myArray);
 
-//  // Решение задачи 54 - завершено
+//  // Решение задачи 54 - завершено -----------------------------------------------
 
 
 
@@ -206,6 +207,140 @@
 // СalculatedRate(myArray);
 // Console.WriteLine();
 
-// // Решения задачи 56 --- Завершено
+// // Решения задачи 56 --- Завершено ----------------------------------------------
 
 
+// // Задача 58: Задайте две матрицы. 
+// // Напишите программу, которая будет находить 
+// // произведение двух матриц. Например, даны 2 матрицы:
+// // 2 4 | 3 4
+// // 3 2 | 3 3
+// // Результирующая матрица будет:
+// // 18 20
+// // 15 18
+
+// Console.WriteLine ("Задача 58: \n Задайте две матрицы." + 
+//                    "Напишите программу, которая будет находить \n"  +
+//                    "произведение двух матриц. Например, даны 2 матрицы: \n");
+
+
+// Console.Write("Введите количество строк первой матрицы: ");
+// int numberRowsFirstMatrix = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов первой матрицы: ");
+// int numberColumnFirstMatrix = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество строк второй матрицы: ");
+// int numberRowsSecondMatrix = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов второй матрицы: ");
+// int numberColumnSecondMatrix = Convert.ToInt32(Console.ReadLine());
+
+
+// int [,] firstMatrix = new int[numberRowsFirstMatrix, numberColumnFirstMatrix];
+// {
+//     Random random = new Random();
+//     for (int i = 0; i < firstMatrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < firstMatrix.GetLength(1); j++)
+//         {
+//             firstMatrix[i, j] = random.Next(1,10);            
+            
+//         }
+
+//     }
+    
+// }
+
+// void ShowArrayFirstMatrix(int[,] firstMatrix)
+// {  
+
+//     for (int i=0; i < firstMatrix.GetLength(0); i++)    
+//      {           
+//         for (int j=0; j < firstMatrix.GetLength(1); j++)
+//         {           
+//          Console.Write(firstMatrix[i, j]);          
+//          Console.Write(" ");             
+//         }
+//            Console.WriteLine("");                                                   
+                                        
+//      }      
+      
+// }
+
+// Console.WriteLine("Значения первой матрицы");
+// ShowArrayFirstMatrix(firstMatrix);
+
+// int [,] secondMatrix = new int[numberRowsSecondMatrix, numberColumnSecondMatrix];
+// {
+//     Random random = new Random();
+//     for (int i = 0; i < secondMatrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < secondMatrix.GetLength(1); j++)
+//         {
+//             secondMatrix[i, j] = random.Next(1,10);            
+            
+//         }
+
+//     }
+     
+// }    
+
+// void ShowArraySecondMatrix(int[,] secondMatrix)
+// {  
+
+//     for (int i=0; i < secondMatrix.GetLength(0); i++)    
+//      {           
+//         for (int j=0; j < secondMatrix.GetLength(1); j++)
+//         {           
+//          Console.Write(secondMatrix[i, j]);          
+//          Console.Write(" ");             
+//         }
+//            Console.WriteLine("");                                                   
+                                        
+//      }      
+      
+// }
+
+// Console.WriteLine("Значения второй матрицы");
+// ShowArraySecondMatrix(secondMatrix);
+
+
+// int[,] resultMatrix = new int[numberRowsFirstMatrix,numberColumnSecondMatrix];
+
+// void MultiplyMatrix(int[,] firstMatrix, int[,] secondMatrix, int[,] resultMatrix)
+// {
+//   for (int i = 0; i < resultMatrix.GetLength(0); i++)
+//   {
+//     for (int j = 0; j < resultMatrix.GetLength(1); j++)
+//     {
+//       int sum = 0;
+//       for (int k = 0; k < firstMatrix.GetLength(1); k++)
+//       {
+//         sum += firstMatrix[i,k] * secondMatrix[k,j];
+//       }
+//       resultMatrix[i,j] = sum;
+//     }
+//   }
+// }
+
+// void ShowResultMatrix(int[,] resultMatrix)
+// {  
+
+//     for (int i=0; i < resultMatrix.GetLength(0); i++)    
+//      {           
+//         for (int j=0; j < resultMatrix.GetLength(1); j++)
+//         {           
+//          Console.Write(resultMatrix[i, j]);          
+//          Console.Write(" ");             
+//         }
+//            Console.WriteLine("");                                                   
+                                        
+//      }      
+      
+// }
+
+
+// MultiplyMatrix(firstMatrix, secondMatrix, resultMatrix);
+// Console.WriteLine("Произведение первой и второй матриц:");
+// ShowResultMatrix(resultMatrix);
+
+// // // Решения задачи 58 --- Завершено ----------------------------------------------
